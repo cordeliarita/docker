@@ -27,13 +27,13 @@ sleep 3
 sudo yum-config-manager --add-repo [https://download.docker.com/linux/centos/docker-ce.repo]
 
 echo -e "\nNow we will install the Docker engine and other required packages...\n"
-sleep3
+sleep 3
 sudo yum install docker-ce docker-ce-cli containerd.io
 #During this step, you may be prompted to accept the GPG key. The fingerprint should be 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35. Verify these details and enter y to accept.
 
 if [ $? -ne 0 ]
 then
-echo -e "\nPlease check the cript and you may have to enter fingerprint to accept the GPG key...\n"
+echo -e "\nPlease check the script and you may have to enter fingerprint to accept the GPG key...\n"
 fi
 
 sleep 3
@@ -50,7 +50,7 @@ echo -e "\nLet us check now the status of Docker to make sure it is running and 
 
 sleep 3
 
-systemctl status dockerecho
+systemctl status docker
 
 echo -e "\nNow we can verify to see if Docker is properly installed!\n"
 
