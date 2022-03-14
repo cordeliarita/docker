@@ -34,6 +34,7 @@ sudo yum install docker-ce docker-ce-cli containerd.io
 if [ $? -ne 0 ]
 then
 echo -e "\nPlease check the script and you may have to enter fingerprint to accept the GPG key...\n"
+exit 2
 fi
 
 sleep 3
